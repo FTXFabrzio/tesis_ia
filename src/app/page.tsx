@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Link from 'next/link';
 import { getDocuments, getCategories, getStats, initDatabase } from '@/lib/actions';
 import { StatsCard } from '@/components/StatsCard';
 import { DocumentTable } from '@/components/DocumentTable';
@@ -242,7 +243,7 @@ function FilterLink({
   icon: any;
 }) {
   return (
-    <a
+    <Link
       href={href}
       className={cn(
         "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all group",
@@ -256,6 +257,6 @@ function FilterLink({
         active ? "text-sky-400" : "text-slate-500"
       )} />
       {children}
-    </a>
+    </Link>
   );
 }

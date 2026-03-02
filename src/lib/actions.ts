@@ -275,13 +275,13 @@ export async function initDatabase() {
 
     try {
       await db.execute('ALTER TABLE documentos ADD COLUMN scimango TEXT');
-    } catch (e) {
+    } catch {
       // Column might already exist
     }
 
     try {
       await db.execute('ALTER TABLE documentos ADD COLUMN base_datos TEXT');
-    } catch (e) {
+    } catch {
       // Column might already exist
     }
 
